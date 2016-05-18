@@ -1,11 +1,11 @@
 新しいパッケージの作成
-cv_bridgeをテストするための新しいパッケージ（cvTest）を以下のように作成します。
+cv_bridgeをテストするための新しいパッケージ（cv_test）を以下のように作成します。
 $ cd ~/catkin_ws/src
-$ catkin_create_pkg cvTest sensor_msgs cv_bridge roscpp rospy std_msgs image_transport
+$ catkin_create_pkg cv_test sensor_msgs cv_bridge roscpp rospy std_msgs image_transport
 
 remap タグにより、変換を行ないます。
 CMakeLists.txtの修正
-~/catkin_ws/src/cvTest/CMakeLists.txt の最後に以下の4行を加えて下さい。
+~/catkin_ws/src/cv_test/CMakeLists.txt の最後に以下の4行を加えて下さい。
 
 find_package( OpenCV REQUIRED )
 include_directories(  ${catkin_INCLUDE_DIRS}  ${OpenCV_INCLUDE_DIRS} )
